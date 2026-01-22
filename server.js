@@ -34,7 +34,7 @@ app.use((req, res) => {
 const server = http.createServer(app);
 
 server.on("upgrade", (req, socket, head) => {
-  if (!req.url.startsWith("/ws")) {
+  if (!req.url.startsWith("/api")) {
     socket.destroy();
     return;
   }
