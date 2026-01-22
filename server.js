@@ -14,7 +14,7 @@ const proxy = httpProxy.createProxyServer({
 
 // Remove obvious proxy fingerprints
 proxy.on("proxyReq", (proxyReq) => {
-  proxyReq.setHeader("Host", TARGET_HOST);
+//  proxyReq.setHeader("Host", TARGET_HOST);
   proxyReq.removeHeader("x-forwarded-for");
   proxyReq.removeHeader("x-forwarded-proto");
   proxyReq.removeHeader("x-forwarded-host");
